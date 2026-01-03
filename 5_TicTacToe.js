@@ -40,13 +40,14 @@ y↓   ┌──────┬──────┬──────┐
         //checks if field is free or occupied already with a symbol		
         return this.board[y][x] === null;
     }
-	placeSymbol(y,x,symbol){
-		//used to place the symbol within the board
-			if (myBoard.isEmpty(inputFieldY, inputFieldX)) {
-            	//myBoard.board[inputFieldY][inputFieldX] = inputSymbol;
-        } 	else {
-            	console.log("Position already set");
-        }
+	placeSymbol(x, y, symbol) {
+	if (this.board[y][x] !== null) {
+		console.log("Feld belegt");
+		return false;
+	}
+
+	this.board[y][x] = symbol;
+	return true;
 	}
 
 
@@ -180,9 +181,197 @@ const myGame = new Game();
 myBoard.printBoard();
 
 
+//defines the starting condition of the game 
+var currentPlayer = "X";
+
+var player = document.getElementById("player_info");
+var symbol = document.getElementById("player_symbol");
+	
+
+player.textContent = "Player : " + currentPlayer;
+
+
+/*Grab HTML stuff
+Basically gets every value of each HTML div id from field 00 to field 22 including 
+the dataset- values defined for each field in the HTML
+
+*/
+
+var x0y0 = document.getElementById("field00");
+const x00 = Number(x0y0.dataset.x);
+const y00 = Number(x0y0.dataset.y);
+x0y0.onclick = function(){
+	console.log("X: " + x00 + " Y: " + y00);
+
+	myBoard.placeSymbol(x00,y00,currentPlayer);
+	x0y0.textContent=currentPlayer;
+	if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = "Player : " + currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = "Player : " + currentPlayer;
+		}
+	
+	myBoard.printBoard();
+	myGame.checkGame(myBoard.board);
+}
+
+var x1y0 = document.getElementById("field01");
+const x10 = Number(x1y0.dataset.x);
+const y10 = Number(x1y0.dataset.y);
+x1y0.onclick = function(){
+	console.log("X: " + x10 + " Y: " + y10);
+
+	myBoard.placeSymbol(x10,y10,currentPlayer);
+	myBoard.printBoard();
+	x1y0.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+	
+}
+
+var x2y0 = document.getElementById("field02");
+const x20 = Number(x2y0.dataset.x);
+const y20 = Number(x2y0.dataset.y);
+x2y0.onclick = function(){
+	console.log("X: " + x20 + " Y: " + y20);
+	myBoard.placeSymbol(x20,y20,currentPlayer);
+	myBoard.printBoard();	
+	x2y0.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+}
+
+var x0y1 = document.getElementById("field10");
+const x01 = Number(x0y1.dataset.x);
+const y01 = Number(x0y1.dataset.y);
+x0y1.onclick = function(){
+	console.log("X: " + x01 + " Y: " + y01);
+	myBoard.placeSymbol(x01,y01,currentPlayer);
+	myBoard.printBoard();
+	x0y1.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+}
+
+var x1y1 = document.getElementById("field11");
+const x11 = Number(x1y1.dataset.x);
+const y11 = Number(x1y1.dataset.y);
+x1y1.onclick = function(){
+	console.log("X: " + x11 + " Y: " + y11);
+	myBoard.placeSymbol(x11,y11,currentPlayer);
+	myBoard.printBoard();
+	x1y1.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+}
+
+var x2y1 = document.getElementById("field12");
+const x21 = Number(x2y1.dataset.x);
+const y21 = Number(x2y1.dataset.y);
+x2y1.onclick = function(){
+	console.log("X: " + x21 + " Y: " + y21);
+	myBoard.placeSymbol(x21,y21,currentPlayer);
+	myBoard.printBoard();
+	x2y1.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+}
+
+var x0y2 = document.getElementById("field20");
+const x02 = Number(x0y2.dataset.x);
+const y02 = Number(x0y2.dataset.y);
+x0y2.onclick = function(){
+	console.log("X: " + x02 + " Y: " + y02);
+	myBoard.placeSymbol(x02,y02,currentPlayer);
+	myBoard.printBoard();
+	x0y2.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+}
+
+var x1y2 = document.getElementById("field21");
+const x12 = Number(x1y2.dataset.x);
+const y12 = Number(x1y2.dataset.y);
+x1y2.onclick = function(){
+	console.log("X: " + x12 + " Y: " + y12);
+	myBoard.placeSymbol(x12,y12,currentPlayer);
+	myBoard.printBoard();
+	x1y2.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+}
+
+var x2y2 = document.getElementById("field22");
+const x22 = Number(x2y2.dataset.x);
+const y22 = Number(x2y2.dataset.y);
+x2y2.onclick = function(){
+	console.log("X: " + x22 + " Y: " + y22);
+	myBoard.placeSymbol(x22,y22,currentPlayer);
+	myBoard.printBoard();
+	x2y2.textContent=currentPlayer;
+		if (currentPlayer === "X") {
+		currentPlayer = "O";
+		player.textContent = currentPlayer;
+		} else {
+		currentPlayer = "X";
+		player.textContent = currentPlayer;
+		}
+	myGame.checkGame(myBoard.board);
+}
+
+
+	myBoard.printBoard();
+
+
+
+
 /* Main Game runs in a loop as long as no winner is set*/
 // Innere und äußere Schleife überarbeiten
-
+/*
 do {
 
     do {
@@ -194,8 +383,7 @@ do {
 	   	myBoard.placeSymbol(inputFieldY,inputFieldX,inputSymbol);
     } while (!myBoard.isEmpty(inputFieldY, inputFieldX));
     myBoard.board[inputFieldY][inputFieldX] = inputSymbol;
-    //myBoard.board[inputFieldY][inputFieldX] = inputSymbol;
-
+   
     console.log(inputFieldX, inputFieldY);
     console.log(myBoard.board[inputFieldY][inputFieldX]);
 
@@ -204,4 +392,6 @@ do {
 
 } while (myGame.checkGame(myBoard.board) !== true);
 
+
+*/
 console.log("Gewonnen");

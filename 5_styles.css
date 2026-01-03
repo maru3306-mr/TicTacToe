@@ -1,0 +1,88 @@
+#left_rows{
+    float:left;
+    padding:10px;
+}
+#middle_rows{
+    float:left;
+    padding:10px;
+}
+#right_rows{
+    float:left;
+    padding:10px;
+}
+#field00{
+    border: 1px solid black;
+    padding:10px;
+}
+#field00:hover{
+  background-color: blue;
+  color: white;
+}
+#field01{
+    border: 1px solid black;
+    padding:10px;
+}
+#field01:hover{
+  background-color: blue;
+  color: white;
+}
+#field02{
+    border: 1px solid black;
+    padding:10px;
+}
+#field02:hover{
+  background-color: blue;
+  color: white;
+}
+#field10{
+    border: 1px solid black;
+    padding:10px;
+}
+#field10:hover{
+  background-color: blue;
+  color: white;
+}
+#field11{
+    border: 1px solid black;
+    padding:10px;
+}
+#field11:hover{
+  background-color: blue;
+  color: white;
+}
+#field12{
+    border: 1px solid black;
+    padding:10px;
+}
+#field12:hover{
+  background-color: blue;
+  color: white;
+}
+#field20{
+    border: 1px solid black;
+    padding:10px;
+}
+#field20:hover{
+  background-color: blue;
+  color: white;
+}
+#field21{
+    border: 1px solid black;
+    padding:10px;
+}
+#field21:hover{
+  background-color: blue;
+  color: white;
+}
+#field22{
+    border: 1px solid black;
+    padding:10px;
+}
+#field22:hover{
+  background-color: blue;
+  color: white;
+}
+#player_info{
+    float:left;
+    padding:10px;
+}

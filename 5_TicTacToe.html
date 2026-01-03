@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TicTacToe - Game</title>
-	<link rel="stylesheet" type="text/css" href="3_styles.css">
+	<link rel="stylesheet" type="text/css" href="5_styles.css">
 	
 </head>
 <body>
@@ -12,13 +12,28 @@
      <div id="main">
         <h1>TicTacToe - Game</h1>
         <div id="board">
-            X | X | X
+            <div id="left_rows">
+                <div id="field00" data-x="0" data-y="0">X0Y0</div>
+                <div id="field01" data-x="0" data-y="1">X0Y1</div>
+                <div id="field02" data-x="0" data-y="2">X0Y2</div>
+            </div>
+            <div id="middle_rows">
+                <div id="field10" data-x="1" data-y="0">X1Y0</div>
+                <div id="field11" data-x="1" data-y="1">X1Y1</div>
+                <div id="field12" data-x="1" data-y="2">X1Y2</div>
+            </div>
+            <div id="right_rows">
+                <div id="field20" data-x="2" data-y="0">X2Y0</div>
+                <div id="field21" data-x="2" data-y="1">X2Y1</div>
+                <div id="field22" data-x="2" data-y="2">X2Y2</div>
+            </div>
         </div>
-        <p>Spieler 1 ist dran!</p>
+        <p id="player_info">Spieler 1 ist dran!</p>
+        <p id="player_symbol">Symbol X</p>
      </div>
 
 
-	<script src="5_TicTacToe.jss"></script>
+	<script src="5_TicTacToe.js"></script>
 
 </body>
 </html>
